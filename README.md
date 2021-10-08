@@ -8,6 +8,6 @@ This Repository is intended for tracking the progress of website development. It
 5. In the git terminal, enter the following and hit the enter key.
 ` git pull https://github.com/kahleeeb3/Web-Team.git `
 ![](/setup/image03.png)
-6. A new `Web-Team` folder should have been created. Close the git terminal, enter the `Web-Team` folder and create a new folder that is named `Your Name` and then place an empty text file inside the folder.
+6. A new `Web-Team` folder should have been created. Close the git terminal, enter the `Web-Team` folder and then the `Users` folder. Create a new folder inside the `Users` folder that is named `Your Name` and then place an empty text file inside the folder.
 7. Navigate back to the `Web-Team` folder, right click and select `Git Bash` once again. Now in the terminal type `./github.sh`. This will run script to push your changes to the github repository. Type your name into the `Push Message` and hit enter.
  
