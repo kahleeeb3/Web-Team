@@ -45,3 +45,5 @@ This guide will assume you have the following installed on your local machine:
     </p>
 
     Select `Save All & Commit` and then type your name into the message box that appears.
+
+9. Click the Blue `Sync Changes Button`. You should now be able to Refesh the [Web Repository](https://github.com/kahleeeb3/Web-Team) and see the files added to your folder.
