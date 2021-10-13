@@ -33,8 +33,10 @@ This guide will assume you have the following installed on your local machine:
 
     A new `Web-Team` folder should have been created. Close the git terminal
 
+## Edit Files in Repo
+
 6. Open Visual Studio Code (VSC), select `File > Open Folder` and select the `Web-Team` folder created in Step 5.
-7. Inside the `user` folder create a new folder name `Your Name` and place a random file in the folder.
+7. Inside the `user` folder create a new folder named `Your Name` and place a random file in the folder.
 8. In VSC, you should notice an icon on the left side bar with a notification icon. Select this icon.
     <p align="center">
         <img src="image05.png" alt="drawing" width="30"/>
@@ -44,6 +46,9 @@ This guide will assume you have the following installed on your local machine:
         <img src="image06.png" alt="drawing" width="200"/>
     </p>
 
-    Select `Save All & Commit` and then type your name into the message box that appears.
+    Select `Save All & Commit` if applicable and then type your name into the message box that appears.
 
-9. Click the Blue `Sync Changes Button`. You should now be able to Refesh the [Web Repository](https://github.com/kahleeeb3/Web-Team) and see the files added to your folder.
+9. Click the Blue `Sync Changes Button`. You should now be able to Refesh the [Web Repository](https://github.com/kahleeeb3/Web-Team/tree/main/user) and see the files added to your folder.
+    <p align="center">
+        <img src="image07.png" alt="drawing" width="200"/>
+    </p>
