@@ -1,7 +1,9 @@
-# Web-Team
-This Repository is intended for tracking the progress of website development. It will allow me to impliment version control and see who is making what changes.
-## How to Setup
-1. Download/ Install [Git](https://git-scm.com/downloads) on your personal computer
+# How to Setup
+## Recommended Software
+This guide will assume you have the following installed on your local machine:
+1. [Git](https://git-scm.com/downloads) for pulling/pushing files
+2. [Visual Studio Code](https://code.visualstudio.com/) IDE with built in git features.
+## Cloning the Repo (Copying Files)
 2. Create a folder on your personal computer.
 3. Right Click inside this folder and select the option `"Git Bash Here"` ![](/setup/image01.png)
 4. From the Github Repo, select the `Code` dropdown menu and copy the http. ![](/setup/image02.png)
