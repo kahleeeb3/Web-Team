@@ -25,7 +25,7 @@ This guide will assume you have the following installed on your local machine:
 
 5. In the git terminal, enter the following:
     ```
-    git pull https://github.com/kahleeeb3/Web-Team.git 
+    git clone https://github.com/kahleeeb3/Web-Team.git 
     ```
     <p align="center">
         <img src="image03.png" alt="drawing" width="300"/>
