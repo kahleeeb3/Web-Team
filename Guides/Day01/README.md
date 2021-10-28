@@ -1,4 +1,8 @@
 # Day 01
+> Make sure to pull the git repo before doing the following
+    <p align="center">
+        <img src="images/im0.png" alt="drawing" width="200"/>
+    </p>
 ## Install Extension
 1. Click on the extensions icon in the left hand side of VSC
     <p align="center">
@@ -19,4 +23,4 @@ Look at the pinned messages in the `#Web-Team` channel and choose a task that se
 3. Select `Run and Debug` to view the HTML file in the browser and review some useful HTML info.
 
 ## Try it Yourself
-Inside your user folder I would like to see some progress that you have made towards the task you chose by the end of next week (11/4/21).
+Inside your user folder I would like to see some progress that you have made towards the task you chose by the end of next week (11/4/21). Remeber to PUSH YOUR CHANGES when done like we did in the setup process.
