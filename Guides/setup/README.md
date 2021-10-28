@@ -11,7 +11,7 @@ This guide will assume you have the following installed on your local machine:
 
 3. Right Click inside this folder and select the option `"Git Bash Here"` 
     <p align="center">
-        <img src="image01.png" alt="drawing" width="300"/>
+        <img src="images/image01.png" alt="drawing" width="300"/>
     </p>
 
 4. In the terminal window type
@@ -20,7 +20,7 @@ This guide will assume you have the following installed on your local machine:
     git config --global user.name "Your Name"
     ```
     <p align="center">
-        <img src="image04.png" alt="drawing" width="300"/>
+        <img src="images/image04.png" alt="drawing" width="300"/>
     </p>
 
 5. In the git terminal, enter the following:
@@ -28,7 +28,7 @@ This guide will assume you have the following installed on your local machine:
     git clone https://github.com/kahleeeb3/Web-Team.git 
     ```
     <p align="center">
-        <img src="image03.png" alt="drawing" width="300"/>
+        <img src="images/image03.png" alt="drawing" width="300"/>
     </p>
 
     A new `Web-Team` folder should have been created. Close the git terminal
@@ -39,16 +39,16 @@ This guide will assume you have the following installed on your local machine:
 7. Inside the `user` folder create a new folder named `Your Name` and place a random file in the folder.
 8. In VSC, you should notice an icon on the left side bar with a notification icon. Select this icon.
     <p align="center">
-        <img src="image05.png" alt="drawing" width="30"/>
+        <img src="images/image05.png" alt="drawing" width="30"/>
     </p>
     Now, select the check mark above the changes section.
     <p align="center">
-        <img src="image06.png" alt="drawing" width="200"/>
+        <img src="images/image06.png" alt="drawing" width="200"/>
     </p>
 
     Select `Save All & Commit` if applicable and then type your name into the message box that appears.
 
 9. Click the Blue `Sync Changes Button`. You should now be able to Refesh the [Web Repository](https://github.com/kahleeeb3/Web-Team/tree/main/user) and see the files added to your folder.
     <p align="center">
-        <img src="image07.png" alt="drawing" width="200"/>
+        <img src="images/image07.png" alt="drawing" width="200"/>
     </p>
