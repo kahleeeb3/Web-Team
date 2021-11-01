@@ -2,6 +2,7 @@
 <html>
 
 <head>
+    <title>Caleb Powell</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css_files/collapse.css">
     <script>
@@ -23,7 +24,7 @@
 
 <body>
     <div id="mySidebar" class="sidebar">
-        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&#10005;</a>
         <a href="resume.html">Resume</a>
         <a href="#">Learn More</a>
         <a href="#">Contact</a>
@@ -75,7 +76,7 @@
             document.getElementById("mySidebar").style.width = "0";
             document.getElementById("main").style.marginLeft = "0";
             var elem = document.getElementById("sidebarbtn");
-            elem.innerHTML = '<button class="openbtn" onclick="openNav()">☰ Open Sidebar</button>';
+            elem.innerHTML = '<button class="openbtn" onclick="openNav()">&#9776 Open Sidebar</button>';
         }
 
         /* Set the sidebar to initially be open if window is big enough*/
