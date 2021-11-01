@@ -2,37 +2,90 @@
 <html>
 
 <head>
-  <script>
-    let open = 0;
-    function myFunction(link) {
-      if (open == 0) {
-        document.getElementById("demo").innerHTML = '<iframe id="iframe" src="files/' + link + '" width="700" height="450"></iframe>';
-        document.getElementById("link").innerHTML = 'Close Preview';
-        open = 1;
-      }
-      else {
-        document.getElementById("demo").innerHTML = '';
-        document.getElementById("link").innerHTML = 'Open Preview';
-        open = 0;
-      }
-    }
-  </script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css_files/collapse.css">
+    <script>
+        let open = 0;
+        function myFunction(link, ElementId) {
+            if (open == 0) {
+                document.getElementById("PDFPreview").innerHTML = '<iframe id="iframe" src="files/' + link + '" width="700" height="450"></iframe>';
+                document.getElementById(ElementId).innerHTML = 'Close Preview';
+                open = 1;
+            }
+            else {
+                document.getElementById("PDFPreview").innerHTML = '';
+                document.getElementById(ElementId).innerHTML = 'Open Preview';
+                open = 0;
+            }
+        }
+    </script>
 </head>
 
 <body>
-  <h1>Welcome!</h1>
-  <h2>Computer Science ePortfolio 2022</h2>
-  <p>
-    <img src="files/IMG_0537_Original.jpeg" alt="drawing" width="150" />
-  </p>
+    <div id="mySidebar" class="sidebar">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+        <a href="resume.html">Resume</a>
+        <a href="#">Learn More</a>
+        <a href="#">Contact</a>
+    </div>
 
-  <h3>Written Works</h3>
-  File Name <a href="#" id="link" onClick="myFunction('test.pdf')">Open Preview</a><br>
-  File Name <a href="#" id="link" onClick="myFunction('HW08.pdf')">Open Preview</a>
-  <p id="demo"></p>
-  <h3>Coding Repositories</h3>
-  <a href="https://github.com/kahleeeb3/Web-Team">Web-Team</a><br>
-  <a href="https://github.com/kahleeeb3/CSC-Club">CSC-Club Discord Bot</a><br>
+    <!-- Old Stuff -->
+    <div id="main">
+        <p id="sidebarbtn"></p>
+        <h1>Welcome!</h1>
+        <h2>Computer Science ePortfolio 2022</h2>
+        <p>
+            <img src="files/IMG_0537_Original.jpeg" alt="drawing" width="150" />
+        </p>
+        Physics/Math Major; Computer Science Minor<br>
+        Computer Science Club President (2021-2022)<br>
+        Society of Physics Students Vice President (2021-2022)<br>
+        Physics Quantitative Skills Center Tutor (2019-2022)<br>
+
+
+        <h3>Written Works</h3>
+        Arduino Uno Oscilloscope <a href="#" id="link" onClick="myFunction('FinalProject.pdf','link')">Open Preview</a><br>
+        File Name <a href="#" id="link2" onClick="myFunction('HW08.pdf','link2')">Open Preview</a>
+        <p id="PDFPreview"></p>
+
+        <h3>Coding Repositories</h3>
+
+        5 Week Tech Point "SOS-Challange" (Summer 2020) <a
+            href="https://github.com/Sunsetdreamer52/SOS-Challenge">Github</a><br>
+
+        Python Discord API Implementation (2021) <a href="https://github.com/kahleeeb3/CSC-Club">Github</a><br>
+
+        Small Group Web Development (2021) <a href="https://github.com/kahleeeb3/Web-Team">Github</a><br>
+
+        Analysis of Brinicle Growth Rate over Time (Summer 2021 - Present) <a
+            href="https://github.com/kahleeeb3/Brinicle">Github</a><br>
+    </div>
+
+    <script>
+
+        /* Open Sidebar */
+        function openNav() {
+            document.getElementById("mySidebar").style.width = "250px";
+            document.getElementById("main").style.marginLeft = "250px";
+            document.getElementById("sidebarbtn").innerHTML = "";
+        }
+
+        /* Close Sidebar */
+        function closeNav() {
+            document.getElementById("mySidebar").style.width = "0";
+            document.getElementById("main").style.marginLeft = "0";
+            var elem = document.getElementById("sidebarbtn");
+            elem.innerHTML = '<button class="openbtn" onclick="openNav()">☰ Open Sidebar</button>';
+        }
+
+        /* Set the sidebar to initially be open if window is big enough*/
+        if (window.screen.width >= 700) {
+            openNav()
+        }
+        else{
+            closeNav()
+        }
+    </script>
 
 </body>
 
