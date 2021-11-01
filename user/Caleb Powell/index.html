@@ -1,11 +1,39 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>Title of the document</title>
-  </head>
-  <body>
-    <h1>How to disable downloading of the PDF document</h1>
-    <iframe src="files/test.pdf" width="50%" height="500px">
-    </iframe>
-  </body>
+
+<head>
+  <script>
+    let open = 0;
+    function myFunction(link) {
+      if (open == 0) {
+        document.getElementById("demo").innerHTML = '<iframe id="iframe" src="files/' + link + '" width="700" height="450"></iframe>';
+        document.getElementById("link").innerHTML = 'Close Preview';
+        open = 1;
+      }
+      else {
+        document.getElementById("demo").innerHTML = '';
+        document.getElementById("link").innerHTML = 'Open Preview';
+        open = 0;
+      }
+    }
+  </script>
+</head>
+
+<body>
+  <h1>Welcome!</h1>
+  <h2>Computer Science ePortfolio 2022</h2>
+  <p>
+    <img src="files/IMG_0537_Original.jpeg" alt="drawing" width="150" />
+  </p>
+
+  <h3>Written Works</h3>
+  File Name <a href="#" id="link" onClick="myFunction('test.pdf')">Open Preview</a><br>
+  File Name <a href="#" id="link" onClick="myFunction('HW08.pdf')">Open Preview</a>
+  <p id="demo"></p>
+  <h3>Coding Repositories</h3>
+  <a href="https://github.com/kahleeeb3/Web-Team">Web-Team</a><br>
+  <a href="https://github.com/kahleeeb3/CSC-Club">CSC-Club Discord Bot</a><br>
+
+</body>
+
 </html>
