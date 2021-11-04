@@ -1,0 +1,24 @@
+<!doctype html>
+<html>
+
+    <head>
+        <title> Forms 
+            <title style="background-color:red;">
+            <title style="text-align:center;">
+            <title style="font-size:100px; color:white;">
+            </title>
+            </head>
+
+    <body style="background-color:red;">
+        <h1> style="color: red; align center; font-family fantasy;"> Pick your meme food:))</h1>
+        <p style="font-family:fantasy;">
+        <ul>
+        <li>PBJ (not a meme)</li>
+            <li>pitzah</li>
+                <li>borgir</li>
+                    <li>cola</li>
+        </ul>
+                    <link>https://www.youtube.com/watch?v=Sxx8LQh8fm0</link>
+        </p>
+    </body>
+</html>
