@@ -1,10 +1,6 @@
-body {
-    font-family: "Times New Roman", Times, serif;
-}
-
 .sidenav {
     height: 100%;
-    width: 160px;
+    width: 150px;
     position: fixed;
     z-index: 1;
     top: 0;
@@ -17,7 +13,7 @@ body {
 .sidenav a {
     padding: 6px 8px 6px 16px;
     text-decoration: none;
-    font-size: 25px;
+    font-size: 20px;
     color: #ffffff;
     display: block;
 }
@@ -27,9 +23,9 @@ body {
 }
 
 .main {
-    margin-left: 160px;
+    margin-left: 150px;
     /* Same as the width of the sidenav */
-    font-size: 28px;
+    /*font-size: 28px;*/
     /* Increased text to enable scrolling */
     padding: 0px 10px;
 }

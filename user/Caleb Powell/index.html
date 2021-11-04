@@ -2,62 +2,106 @@
 <html>
 
 <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="./css_files/test.css">
-    <!--Imports the test.css file-->
+    <title>Caleb Powell</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css_files/collapse.css">
+    <!--<link rel="icon" href="./css_files/logo.ico">-->
+
+
+    <script>
+        let open = 0;
+        function myFunction(link, ElementId) {
+            if (open == 0) {
+                document.getElementById("PDFPreview").innerHTML = '<iframe id="iframe" src="files/' + link + '" width="700" height="450"></iframe>';
+                document.getElementById(ElementId).innerHTML = 'Close Preview';
+                open = 1;
+            }
+            else {
+                document.getElementById("PDFPreview").innerHTML = '';
+                document.getElementById(ElementId).innerHTML = 'Open Preview';
+                open = 0;
+            }
+        }
+    </script>
 </head>
 
-<!-- The Body of the Document -->
-
 <body>
+    <div id="mySidebar" class="sidebar">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&#10005;</a>
+        <a href="./files/2022_Resume_Caleb_Powell.pdf" target="_blank" rel="noopener noreferrer">Resume</a>
+        <a href="./files/Transcript_2022.pdf" target="_blank" rel="noopener noreferrer">Transcript</a>
+        <a href="#">Learn More</a>
+        <a href="mailto: cmpowell22@wabash.edu">Email</a>
 
-    <!-- Sidebar with class sidenav -->
-    <div class="sidenav">
-        <a href="#about">About</a>
-        <a href="#services">Services</a>
-        <a href="#clients">Clients</a>
-        <a href="#contact">Contact</a>
     </div>
 
-    <!-- a body of text with class main -->
-    <div class="main">
-        <h2>Welcome to the Computer Science Club</h2>
-
-        <h3> What is CS Club?<h3>
-
-                <p>The Wabash College CS Club is a group of Wabash Students formed in
-                    Fall of 2021. Members include CS majors, and minors, as well as
-                    people with a general interest in CS. In addition to being a
-                    registered club in the Student Senate, we are also a registered
-                    Student Chapter of the Association for Computing Machinery.
-                    Officially, our title is "Wabash College ACM Student Chapter",
-                    however, our friends just call us "CS Club".
-                <p>
-
-                <h3>What does CS do?</h3>
-
-                <ol>
-                    <li>Weekly Meeting with different activities</li>
-                    <li>Fun discussion group for friends</li>
-                    <li>Programming related challenges</li>
-                    <li>Guest Speakers</li>
-                    <li>Whatever people want! Let us know.</li>
-                </ol>
+    <!-- Old Stuff -->
+    <div id="main">
+        <p id="sidebarbtn"></p>
+        <h1>Welcome!</h1>
+        <h2>Computer Science ePortfolio 2022</h2>
+        <p>
+            <img src="files/IMG_0537_Original.jpeg" alt="drawing" width="150" />
+        </p>
+        Physics/Math Major; Computer Science Minor<br>
+        Computer Science Club President (2021-2022)<br>
+        Society of Physics Students Vice President (2021-2022)<br>
+        Physics Quantitative Skills Center Tutor (2019-2022)<br>
 
 
+        <h3>Written Works</h3>
+        <!--
+        Arduino Uno Oscilloscope <a href="#" id="link" onClick="myFunction('FinalProject.pdf','link')">Open Preview</a><br>
+        File Name <a href="#" id="link2" onClick="myFunction('HW08.pdf','link2')">Open Preview</a>
+        <p id="PDFPreview"></p>
+        -->
+        <p>
+            Arduino Uno Oscilloscope <a href="./files/FinalProject.pdf" target="_blank" rel="noopener noreferrer">View
+                File</a>.<br>
+            A Mathematical Analysis of the 15 Puzzle<a href="./files/15_Puzzle.pdf" target="_blank"
+                rel="noopener noreferrer">View File</a>.<br>
+            Analysis of Orthogonal Matrices<a href="./files/Orthogonal_Matrices-1.pdf" target="_blank"
+                rel="noopener noreferrer">View File</a>.
+        </p>
 
-                <h3> Association for Computing Machinery</h3>
-                <a href="https://www.acm.org/chapters/students/student-chapter-resources-and-benefits">
-                    Chapter Resources and Benefits</a>
+        <h3>Coding Repositories</h3>
 
-                <h3>Leaders</h3>
-                <p>
-                    <strong>President</strong> Caleb Powell<br>
-                    <strong>Vice President</strong> Ajay Pokharel<br>
-                    <strong>Secretary</strong> Kazi Fardin<br>
-                    <strong>Treasurer</strong> Owen Runge<br>
-                </p>
+        5 Week Tech Point "SOS-Challange" (Summer 2020) <a
+            href="https://github.com/Sunsetdreamer52/SOS-Challenge">Github</a><br>
+
+        Python Discord API Implementation (2021) <a href="https://github.com/kahleeeb3/CSC-Club">Github</a><br>
+
+        Small Group Web Development (2021) <a href="https://github.com/kahleeeb3/Web-Team">Github</a><br>
+
+        Analysis of Brinicle Growth Rate over Time (Summer 2021 - Present) <a
+            href="https://github.com/kahleeeb3/Brinicle">Github</a><br>
     </div>
+
+    <script>
+
+        /* Open Sidebar */
+        function openNav() {
+            document.getElementById("mySidebar").style.width = "250px";
+            document.getElementById("main").style.marginLeft = "250px";
+            document.getElementById("sidebarbtn").innerHTML = "";
+        }
+
+        /* Close Sidebar */
+        function closeNav() {
+            document.getElementById("mySidebar").style.width = "0";
+            document.getElementById("main").style.marginLeft = "0";
+            var elem = document.getElementById("sidebarbtn");
+            elem.innerHTML = '<button class="openbtn" onclick="openNav()">&#9776 Open Sidebar</button>';
+        }
+
+        /* Set the sidebar to initially be open if window is big enough*/
+        if (window.screen.width >= 700) {
+            openNav()
+        }
+        else {
+            closeNav()
+        }
+    </script>
 
 </body>
 
