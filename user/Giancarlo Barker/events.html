@@ -1,34 +1,48 @@
 <!DOCTYPE html>
-
+<!--TODO: Clean up syntax, standardize CSS declarations in styling file-->
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <meta http-equiv="x-ua-compatible" content="ie=edge">
-
-    <title>Monthly Events | CSC Club</title>
-
-    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0">
-    <link rel="shortcut icon" type="image/x-icon" href="https://www.wabash.edu/favicon.ico">
-    <meta property="og:type" content="university">
-
-
-    <!--Table Styling-->
-    <link rel="stylesheet" href="calendar.css">
+	<meta http-equiv="x-ua-compatible" content="ie=edge">
+	<title>CS Club Events | CSC Club</title>
+	<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0">
+	<link rel="shortcut icon" type="image/x-icon" href="https://www.wabash.edu/favicon.ico">
+	<meta property="og:type" content="university">
+    <link rel="stylesheet" href="event_style.css">
 </head>
 
 <body>
+    <div class="sidenav">
+        <!--TODO: Work in embed for the discord notifications widget-->
+        <hr style="width: 160px; color: #cd0e2c; background-color: #cd0e2c; position:absolute; top: 15px; left:20px">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="currency.html">Currency</a></li>
+            <li><a id="current-page" href="events.html">Calendar</a></li>
+        </ul>
+        <h3>Test</h3>
+    </div>
+    <div class="topBar">
+        <a href="https://wabash.edu">
+            <img src="wabash_logo.png" width="260" height="auto" alt="Wabash College">
+        </a>
+    </div>
+    <div class="colorBar">
+        <h1>CS Club Events</h1>
+    </div>
     <!--TODO: Flesh out/edit page paragraphs-->
-    <a href="https://www.wabash.edu">Wabash College</a>
-    <h1>Wabash College</h1>
-    <h2>CS Club Events</h2>
-    <h3>Our club meetings consist of various programming boot camps, workshops, challenges, guest speakers,
-        and group discussion. Here you can find the events currently planned for this month!
-    </h3>
-    <!--TODO: Take table data and convert to calendar form-->
+    <div class="body_text">
+        <h1 style="padding-bottom: 10px;">What we do.</h1>
+        <h3 style="padding-bottom: 50px;">
+            We Wabash men love our tech. Our club meetings consist of various programming boot camps, workshops, challenges, guest speakers, 
+            and group discussion. Here you can find the events currently planned for this month!
+        </h3>
+    </div>
+    <!--TODO: Take table data and convert to calendar form(Javascript?)-->
     <table class="center">
         <tr>
             <th colspan="5" class="text-center">November</th>
         </tr>
-        <tr>
+        <tr>    
             <th>Event</th>
             <th>Date</th>
             <th>Time</th>
@@ -78,73 +92,25 @@
             <td>Weekly Web Development Team Workshop</td>
         </tr>
     </table>
-<!--
-    <div class="month">
-        <ul>
-            <li class="prev">&#10094;</li>
-            <li class="next">&#10095;</li>
-            <li>
-                August<br>
-                <span style="font-size:18px">2021</span>
-            </li>
-        </ul>
-    </div>
-
-    <ul class="weekdays">
-        <li>Mo</li>
-        <li>Tu</li>
-        <li>We</li>
-        <li>Th</li>
-        <li>Fr</li>
-        <li>Sa</li>
-        <li>Su</li>
-    </ul>
-
-    <ul class="days">
-        <li>1</li>
-        <li>2</li>
-        <li>3</li>
-        <li>4</li>
-        <li>5</li>
-        <li>6</li>
-        <li>7</li>
-        <li>8</li>
-        <li>9</li>
-        <li><span class="active">10</span></li>
-        <li>11</li>
-        <li>12</li>
-        <li>13</li>
-        <li>14</li>
-        <li>15</li>
-        <li>16</li>
-        <li>17</li>
-        <li>18</li>
-        <li>19</li>
-        <li>20</li>
-        <li>21</li>
-        <li>22</li>
-        <li>23</li>
-        <li>24</li>
-        <li>25</li>
-        <li>26</li>
-        <li>27</li>
-        <li>28</li>
-        <li>29</li>
-        <li>30</li>
-        <li>31</li>
-    </ul>
--->
-
+    <br>
+    <br>
+    <br>
+    <br>
     <hr>
-    <footer>
-        <a href="https://www.wabash.edu">Wabash College</a>
-        <p>
-            "301 W. Wabash Avenue"
-            <br>
-            "Crawfordsville, IN 47933"
-            <br>
-            "(765) 361-6100"
-        </p>
-    </footer>
+    <!--TODO: Add a suggestion box at the bottom for event suggestions?-->
+    <div class="footer_text">
+        <footer>
+            <p>
+                301 W. Wabash Avenue
+                <br>
+                Crawfordsville, IN 47933
+                <br>
+                (765) 361-6100
+            </p>
+            <a href="https://wabash.edu">
+                <img src="wabash_logo.png" width="165" height="30" alt="Wabash College">
+            </a>
 
+        </footer>
+    </div>
 </body>
