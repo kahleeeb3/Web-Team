@@ -25,4 +25,3 @@ function test(url) {
     });
     //});
 }
-$(test("employee.csv"));
