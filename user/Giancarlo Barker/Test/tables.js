@@ -1,6 +1,5 @@
 //$(document).ready(function () {
 function test(url) {
-    alert("running")
     $.ajax({
         url: url,
         dataType: "text",
@@ -21,7 +20,8 @@ function test(url) {
                 table_data += '</tr>';
             }
             table_data += '</table>';
-            $('#employee_table').html(table_data);
+            //$('#employee_table').html(table_data);
+            document.getElementById("employee_table").innerHTML = "Penis";
         }
     });
     //});
