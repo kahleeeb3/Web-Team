@@ -1,4 +1,5 @@
-function CsvToTable (url){
+//$(document).ready(function () {
+function test(url) {
     $.ajax({
         url: url,
         dataType: "text",
@@ -19,7 +20,9 @@ function CsvToTable (url){
                 table_data += '</tr>';
             }
             table_data += '</table>';
-            $('#csv_table').html(table_data);
+            $('#employee_table').html(table_data);
         }
     });
+    //});
 }
+test("employee.csv")
