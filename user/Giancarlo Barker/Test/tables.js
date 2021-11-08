@@ -1,5 +1,6 @@
 //$(document).ready(function () {
 function test(url) {
+    alert("running")
     $.ajax({
         url: url,
         dataType: "text",
