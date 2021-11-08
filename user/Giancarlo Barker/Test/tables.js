@@ -1,5 +1,5 @@
-$(document).ready(function () {
-//function test(url) {
+//$(document).ready(function () {
+function test(url) {
     $.ajax({
         url: url,
         dataType: "text",
@@ -23,4 +23,6 @@ $(document).ready(function () {
             $('employee_table').html(table_data);
         }
     });
-});
+    //});
+}
+test("employee.csv")
