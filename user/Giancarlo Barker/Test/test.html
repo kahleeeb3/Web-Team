@@ -37,9 +37,9 @@
 
 <script>
 	//$(document).ready(function () {
-	function test(){
+	function test(url){
 		$.ajax({
-			url: "events.csv",
+			url: url,
 			dataType: "text",
 			success: function (data) {
 				var employee_data = data.split(/\r?\n|\r/);
@@ -63,5 +63,5 @@
 		});
 	//});
 	}
-	test()
+	test("employee.csv")
 </script>
