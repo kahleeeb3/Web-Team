@@ -36,7 +36,8 @@
 </html>
 
 <script>
-	$(document).ready(function () {
+	//$(document).ready(function () {
+	function test(){
 		$.ajax({
 			url: "events.csv",
 			dataType: "text",
@@ -60,5 +61,7 @@
 				$('#employee_table').html(table_data);
 			}
 		});
-	});
+	//});
+	}
+	test()
 </script>
