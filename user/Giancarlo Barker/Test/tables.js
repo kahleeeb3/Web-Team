@@ -20,8 +20,7 @@ $(document).ready(function () {
                 table_data += '</tr>';
             }
             table_data += '</table>';
-            //$('#employee_table').html(table_data);
-            document.getElementById("employee_table").innerHTML = "Penis";
+            $('employee_table').html(table_data);
         }
     });
 });
