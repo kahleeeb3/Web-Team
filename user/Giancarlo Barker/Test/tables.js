@@ -1,5 +1,5 @@
-//$(document).ready(function () {
-function test(url) {
+$(document).ready(function () {
+//function test(url) {
     $.ajax({
         url: url,
         dataType: "text",
@@ -24,6 +24,4 @@ function test(url) {
             document.getElementById("employee_table").innerHTML = "Penis";
         }
     });
-    //});
-}
-test("employee.csv")
+});
