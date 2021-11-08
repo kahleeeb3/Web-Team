@@ -1,44 +1,28 @@
-function Upload() {
-    $.ajax({
-        type: "GET",
-        url: "data.csv",
-        dataType: "csv",
-        success: parseTxt
-    });
-}
-
-function Upload2() {
-    // load in the csv from "fileUpload"
-    var fileUpload = document.getElementById("fileUpload");
-    alert(fileUpload);
-
-    // do stuff to the file
-    var regex = /^([a-zA-Z0-9\s_\\.\-:])+(.csv|.txt)$/;
-    if (regex.test(fileUpload.value.toLowerCase())) {
-        if (typeof (FileReader) != "undefined") {
-            var reader = new FileReader();
-            reader.onload = function (e) {
-                var table = document.createElement("table");
-                var rows = e.target.result.split("\n");
-                for (var i = 0; i < rows.length; i++) {
-                    var cells = rows[i].split(",");
-                    if (cells.length > 1) {
-                        var row = table.insertRow(-1);
-                        for (var j = 0; j < cells.length; j++) {
-                            var cell = row.insertCell(-1);
-                            cell.innerHTML = cells[j];
+$(document).ready(function () {
+    $('#load_data').click(function () {
+        $.ajax({
+            url: "employee.csv",
+            dataType: "text",
+            success: function (data) {
+                var employee_data = data.split(/\r?\n|\r/);
+                var table_data = '<table class="table table-bordered table-striped">';
+                for (var count = 0; count < employee_data.length; count++) {
+                    var cell_data = employee_data[count].split(",");
+                    table_data += '<tr>';
+                    for (var cell_count = 0; cell_count < cell_data.length; cell_count++) {
+                        if (count === 0) {
+                            table_data += '<th>' + cell_data[cell_count] + '</th>';
+                        }
+                        else {
+                            table_data += '<td>' + cell_data[cell_count] + '</td>';
                         }
                     }
+                    table_data += '</tr>';
                 }
-                var dvCSV = document.getElementById("dvCSV");
-                dvCSV.innerHTML = "";
-                dvCSV.appendChild(table);
+                table_data += '</table>';
+                $('#employee_table').html(table_data);
             }
-            reader.readAsText(fileUpload.files[0]);
-        } else {
-            alert("This browser does not support HTML5.");
-        }
-    } else {
-        alert("Please upload a valid CSV file.");
-    }
-}
+        });
+    });
+
+});
