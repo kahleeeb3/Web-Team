@@ -20,9 +20,9 @@ function test(url) {
                 table_data += '</tr>';
             }
             table_data += '</table>';
-            $('employee_table').html(table_data);
+            $('#employee_table').html(table_data);
         }
     });
     //});
 }
-test("employee.csv")
+$(test("employee.csv"));
