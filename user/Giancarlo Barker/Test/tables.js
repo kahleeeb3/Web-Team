@@ -1,5 +1,18 @@
 function Upload() {
+    $.ajax({
+        type: "GET",
+        url: "data.csv",
+        dataType: "csv",
+        success: parseTxt
+    });
+}
+
+function Upload2() {
+    // load in the csv from "fileUpload"
     var fileUpload = document.getElementById("fileUpload");
+    alert(fileUpload);
+
+    // do stuff to the file
     var regex = /^([a-zA-Z0-9\s_\\.\-:])+(.csv|.txt)$/;
     if (regex.test(fileUpload.value.toLowerCase())) {
         if (typeof (FileReader) != "undefined") {
