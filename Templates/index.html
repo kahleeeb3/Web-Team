@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<!-- 
+    Notes:
+        "Ctl + /" creates a comment in VSC
+    Changes:
+        put table inside the body-text class
+        Added align="Left" to the image in the footer
+        reorganized classes
+        removed height setting in CSS
+        made table object align = "center" instead of class = "center"
+        removed center class
+        put image inside the footer div
+ -->
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>CS Club Events | CSC Club</title>
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0">
+    <link rel="shortcut icon" type="image/x-icon" href="https://www.wabash.edu/favicon.ico">
+    <meta property="og:type" content="university">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!--Div 1: Logo -->
+    <div class="topBar">
+        <a href="https://wabash.edu">
+            <img src="wabash_logo.png" width="260" height="auto" alt="Wabash College">
+        </a>
+    </div>
+    <!--Div 2: Title -->
+    <div class="colorBar">
+        <h1>CS Club Events</h1>
+    </div>
+    <div class="content">
+        <!--Div 3: SideBar  -->
+        <div class="sidenav">
+            <!--TODO: Work in embed for the discord notifications widget-->
+            <hr>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="currency.html">Currency</a></li>
+                <li><a id="current-page" href="events.html">Calendar</a></li>
+            </ul>
+        </div>
+        <!--Div 4: Body -->
+        <div class="body_text">
+            <h1 style="padding-bottom: 10px;">What we do.</h1>
+            <h3 style="padding-bottom: 50px;">
+                We Wabash men love our tech. Our club meetings consist of various programming boot camps, workshops,
+                challenges, guest speakers,
+                and group discussion. Here you can find the events currently planned for this month!
+            </h3>
+            <!-- <table class="center"> -->
+            <table align="center">    
+                <tr>
+                    <th colspan="5" class="text-center">November</th>
+                </tr>
+                <tr>
+                    <th>Event</th>
+                    <th>Date</th>
+                    <th>Time</th>
+                    <th>Location</th>
+                    <th>Description</th>
+                </tr>
+                <tr>
+                    <td>Python Workshop(Week 2)</td>
+                    <td>11/03/2021</td>
+                    <td>12:00 PM</td>
+                    <td>Goodrich 101</td>
+                    <td>Python Language Bootcamp with Ajay Pokhrel</td>
+                </tr>
+                <tr>
+                    <td>Web Team Meeting</td>
+                    <td>11/04/2021</td>
+                    <td>12:00 PM</td>
+                    <td>Goodrich 101</td>
+                    <td>Weekly Web Development Team Workshop</td>
+                </tr>
+                <tr>
+                    <td>Python Workshop(Week 3)</td>
+                    <td>11/10/2021</td>
+                    <td>12:00 PM</td>
+                    <td>Goodrich 101</td>
+                    <td>Final Python Language Bootcamp with Ajay Pokhrel</td>
+                </tr>
+                <tr>
+                    <td>Web Team Meeting</td>
+                    <td>11/11/2021</td>
+                    <td>12:00 PM</td>
+                    <td>Goodrich 101</td>
+                    <td>Weekly Web Development Team Workshop</td>
+                </tr>
+                <tr>
+                    <td>General Club Meeting</td>
+                    <td>11/17/2021</td>
+                    <td>12:00 PM</td>
+                    <td>Goodrich 104</td>
+                    <td>General club callout for all memebers</td>
+                </tr>
+                <tr>
+                    <td>Web Team Meeting</td>
+                    <td>11/18/2021</td>
+                    <td>12:00 PM</td>
+                    <td>Goodrich 101</td>
+                    <td>Weekly Web Development Team Workshop</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+
+    <hr style="opacity: .5;">
+    <!--Div 5: Footer -->
+    <div class="footer">
+        <footer>
+            <p>
+                301 W. Wabash Avenue
+                <br>
+                Crawfordsville, IN 47933
+                <br>
+                (765) 361-6100
+                <br>
+                <br>
+                <img src="wabash_logo.png" align="left" width="165" height="30" alt="Wabash College">
+            </p>
+        </footer>
+    </div>
+</body>
