@@ -25,6 +25,7 @@
     download>Download</a>
 
     <script>
+        import make from "./games.js"
         function download(){
             document.getElementById('dl').click();
         }
@@ -56,6 +57,7 @@
 
                 document.getElementById("circular-text").innerHTML = newString;
                 make();
+                
 
                 if(newString == "11100000"){
                     //alert("You're Gay as FUCK");
