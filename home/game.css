@@ -16,11 +16,24 @@ body {
   background: #fff;
   color: #000;
   border-radius: 100%;
-  box-shadow: 0 0 30px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.05);
   padding: 20px;
+  /* important part */
+  grid-area: inner-div;
+}
+
+#user-input {
+  padding-top: 25px;
 }
 
 #circular-text span {
   position: absolute;
   transform-origin: top left;
+}
+
+.container {
+  /* important part */
+  display: grid;
+  place-items: center;
+  grid-template-areas: "inner-div";
 }

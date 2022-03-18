@@ -4,10 +4,80 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="./game.css">
+
+    <script src='./game.js'></script>
     <title>Circle</title>
 </head>
-<body>
-    <div id='circular-text'>00000000</div>
-    <script src='./game.js'></script>
+<body onload="make();">
+    <div class="container">
+        <div id='circular-text'>00000000</div>
+        
+        <div id="circular-text" style="width: 300px; height: 300px;"><span style="transform: translate(150px, 0px) rotate(0deg);">A</span><span style="transform: translate(256.066px, 43.934px) rotate(45deg);">B</span><span style="transform: translate(300px, 150px) rotate(90deg);">C</span><span style="transform: translate(256.066px, 256.066px) rotate(135deg);">D</span><span style="transform: translate(150px, 300px) rotate(180deg);">E</span><span style="transform: translate(43.934px, 256.066px) rotate(225deg);">F</span><span style="transform: translate(0px, 150px) rotate(270deg);">G</span><span style="transform: translate(43.934px, 43.934px) rotate(315deg);">H</span></div>
+
+        <div id = "user-input">
+            Letter: <input name="a" id="a">
+            <button onclick="myFunction(document.getElementById('a').value)">Enter</button>
+        </div>
+    </div>
+
+    <script>
+        function myFunction(p1) {
+            const accepted = ["A","B","C","D","E","F","G","H"]
+            if(accepted.includes(p1)){
+                const index = accepted.indexOf(p1)
+
+                let text = document.getElementById("circular-text").textContent;
+                const myArray = text.split("");
+
+                // Change the Values
+
+                // Value 1
+                if(myArray.slice(index-1)[0] == "0"){
+                    myArray.splice(index-1, 1, '1');
+                }
+                else{
+                    myArray.splice(index-1, 1, '0');
+                }
+
+                // Value 2
+                if(myArray.slice(index)[0] == "0"){
+                    myArray.splice(index, 1, '1');
+                }
+                else{
+                    myArray.splice(index, 1, '0');
+                }
+
+                //Value 3 
+                // Need to include if index != 7 so we dont go over
+                if(index != 7){
+                    if(myArray.slice(index+1)[0] == "0"){
+                        myArray.splice(index+1, 1, '1');
+                    }
+                    else{
+                        myArray.splice(index+1, 1, '0');
+                    }
+                }
+                else{
+                    if(myArray.slice(0)[0] == "0"){
+                        myArray.splice(0, 1, '1');
+                    }
+                    else{
+                        myArray.splice(0, 1, '0');
+                    }
+                }
+
+                const newString = myArray.join("")
+
+                document.getElementById("circular-text").innerHTML = newString;
+                make();
+
+                if(newString == "11111111"){
+                    alert("You're Gay as FUCK");
+                }
+            }
+            
+        }
+    </script>
+
 </body>
 </html>
