@@ -12,6 +12,8 @@ body {
   background-image: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
 }
 #circular-text {
+  width: 400px;
+  height: 400px;
   position: relative;
   background: #fff;
   color: #000;
