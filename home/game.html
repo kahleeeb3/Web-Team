@@ -20,59 +20,46 @@
         </div>
     </div>
 
+    <a id="dl" style="display: none" 
+    href="./rickroll_4k.jpg" 
+    download>Download</a>
+
     <script>
+        function download(){
+            document.getElementById('dl').click();
+        }
+
+        function switchNumbers(myArray, i){
+            if(i == 8){i=0}
+                if(myArray.slice(i)[0] == "0"){
+                        myArray.splice(i, 1, '1');
+                    }
+                else{
+                    myArray.splice(i, 1, '0');
+                }
+            return myArray
+        }
         function myFunction(p1) {
             const accepted = ["A","B","C","D","E","F","G","H"]
             if(accepted.includes(p1)){
                 const index = accepted.indexOf(p1)
 
                 let text = document.getElementById("circular-text").textContent;
-                const myArray = text.split("");
+                let myArray = text.split("");
 
                 // Change the Values
-
-                // Value 1
-                if(myArray.slice(index-1)[0] == "0"){
-                    myArray.splice(index-1, 1, '1');
-                }
-                else{
-                    myArray.splice(index-1, 1, '0');
-                }
-
-                // Value 2
-                if(myArray.slice(index)[0] == "0"){
-                    myArray.splice(index, 1, '1');
-                }
-                else{
-                    myArray.splice(index, 1, '0');
-                }
-
-                //Value 3 
-                // Need to include if index != 7 so we dont go over
-                if(index != 7){
-                    if(myArray.slice(index+1)[0] == "0"){
-                        myArray.splice(index+1, 1, '1');
-                    }
-                    else{
-                        myArray.splice(index+1, 1, '0');
-                    }
-                }
-                else{
-                    if(myArray.slice(0)[0] == "0"){
-                        myArray.splice(0, 1, '1');
-                    }
-                    else{
-                        myArray.splice(0, 1, '0');
-                    }
-                }
+                myArray = switchNumbers(myArray,index-1)
+                myArray = switchNumbers(myArray,index)
+                myArray = switchNumbers(myArray,index+1)
 
                 const newString = myArray.join("")
 
                 document.getElementById("circular-text").innerHTML = newString;
                 make();
 
-                if(newString == "11111111"){
-                    alert("You're Gay as FUCK");
+                if(newString == "11100000"){
+                    //alert("You're Gay as FUCK");
+                    download();
                 }
             }
             
